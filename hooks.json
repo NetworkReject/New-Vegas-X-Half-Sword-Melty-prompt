@@ -1,0 +1,60 @@
+{
+  "sheet": "hooks",
+  "version": "0.1",
+  "note": "Candidate xNVSE hooks. Every row is to_verify: confirm the real function or event name against xNVSE's docs and in the running game before coding.",
+  "tables": {
+    "hooks": {
+      "columns": [
+        "id",
+        "purpose",
+        "reads_table",
+        "writes_table",
+        "status"
+      ],
+      "rows": [
+        {
+          "id": "melee_input",
+          "purpose": "Read mouse movement during an attack to pick a swing direction and speed",
+          "reads_table": "melee.swings",
+          "writes_table": "damage.stamina",
+          "status": "to_verify"
+        },
+        {
+          "id": "melee_hit",
+          "purpose": "Scale hit damage by swing speed, weapon class, limb and lethality",
+          "reads_table": "damage.limbs",
+          "writes_table": "damage.stamina",
+          "status": "to_verify"
+        },
+        {
+          "id": "stagger",
+          "purpose": "Apply stagger and knockback from a landed swing",
+          "reads_table": "melee.swings",
+          "writes_table": "melee.weapon_classes",
+          "status": "to_verify"
+        },
+        {
+          "id": "aim_sway",
+          "purpose": "Add weapon-weight and stamina-based sway while aiming",
+          "reads_table": "aiming.gun_classes",
+          "writes_table": "damage.stamina",
+          "status": "to_verify"
+        },
+        {
+          "id": "stamina_tick",
+          "purpose": "Per-frame stamina drain and regen for the player and NPCs",
+          "reads_table": "damage.stamina",
+          "writes_table": "damage.stamina",
+          "status": "to_verify"
+        },
+        {
+          "id": "damage_scale",
+          "purpose": "Apply the symmetric lethality multiplier to every hit",
+          "reads_table": "damage.global",
+          "writes_table": "damage.limbs",
+          "status": "to_verify"
+        }
+      ]
+    }
+  }
+}

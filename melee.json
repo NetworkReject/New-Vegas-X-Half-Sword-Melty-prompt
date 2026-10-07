@@ -1,0 +1,161 @@
+{
+  "sheet": "melee",
+  "version": "0.1",
+  "note": "All numbers are starting guesses to tune in play. status=proposed means unverified in the running game.",
+  "tables": {
+    "swings": {
+      "columns": [
+        "id",
+        "direction",
+        "input",
+        "damage_mult",
+        "stamina_cost",
+        "min_speed_for_full_damage",
+        "stagger_chance",
+        "knockback",
+        "zone_bias",
+        "status"
+      ],
+      "rows": [
+        {
+          "id": "swing_overhead",
+          "direction": "down",
+          "input": "attack + mouse down",
+          "damage_mult": 1.3,
+          "stamina_cost": 18,
+          "min_speed_for_full_damage": 1.2,
+          "stagger_chance": 0.5,
+          "knockback": 0.6,
+          "zone_bias": "head",
+          "status": "proposed"
+        },
+        {
+          "id": "swing_rising",
+          "direction": "up",
+          "input": "attack + mouse up",
+          "damage_mult": 1.0,
+          "stamina_cost": 15,
+          "min_speed_for_full_damage": 1.0,
+          "stagger_chance": 0.3,
+          "knockback": 0.3,
+          "zone_bias": "torso",
+          "status": "proposed"
+        },
+        {
+          "id": "swing_left",
+          "direction": "left",
+          "input": "attack + mouse left",
+          "damage_mult": 1.0,
+          "stamina_cost": 12,
+          "min_speed_for_full_damage": 0.8,
+          "stagger_chance": 0.35,
+          "knockback": 0.4,
+          "zone_bias": "left_arm",
+          "status": "proposed"
+        },
+        {
+          "id": "swing_right",
+          "direction": "right",
+          "input": "attack + mouse right",
+          "damage_mult": 1.0,
+          "stamina_cost": 12,
+          "min_speed_for_full_damage": 0.8,
+          "stagger_chance": 0.35,
+          "knockback": 0.4,
+          "zone_bias": "right_arm",
+          "status": "proposed"
+        },
+        {
+          "id": "swing_thrust",
+          "direction": "forward",
+          "input": "attack + no mouse movement",
+          "damage_mult": 1.5,
+          "stamina_cost": 20,
+          "min_speed_for_full_damage": 1.0,
+          "stagger_chance": 0.4,
+          "knockback": 0.2,
+          "zone_bias": "torso",
+          "status": "proposed"
+        }
+      ]
+    },
+    "weapon_classes": {
+      "columns": [
+        "id",
+        "label",
+        "weight",
+        "swing_speed_scale",
+        "stamina_mult",
+        "allowed_swings",
+        "parry_window_ms",
+        "nv_weapon_type",
+        "status"
+      ],
+      "rows": [
+        {
+          "id": "one_hand_blade",
+          "label": "One-handed blade",
+          "weight": 2.0,
+          "swing_speed_scale": 1.0,
+          "stamina_mult": 1.0,
+          "allowed_swings": [
+            "swing_overhead",
+            "swing_rising",
+            "swing_left",
+            "swing_right",
+            "swing_thrust"
+          ],
+          "parry_window_ms": 250,
+          "nv_weapon_type": "OneHandMelee",
+          "status": "proposed"
+        },
+        {
+          "id": "one_hand_blunt",
+          "label": "One-handed blunt",
+          "weight": 3.0,
+          "swing_speed_scale": 0.85,
+          "stamina_mult": 1.2,
+          "allowed_swings": [
+            "swing_overhead",
+            "swing_left",
+            "swing_right"
+          ],
+          "parry_window_ms": 200,
+          "nv_weapon_type": "OneHandMelee",
+          "status": "proposed"
+        },
+        {
+          "id": "two_hand",
+          "label": "Two-handed",
+          "weight": 6.0,
+          "swing_speed_scale": 0.65,
+          "stamina_mult": 1.6,
+          "allowed_swings": [
+            "swing_overhead",
+            "swing_rising",
+            "swing_left",
+            "swing_right"
+          ],
+          "parry_window_ms": 150,
+          "nv_weapon_type": "TwoHandMelee",
+          "status": "proposed"
+        },
+        {
+          "id": "unarmed",
+          "label": "Unarmed",
+          "weight": 0.5,
+          "swing_speed_scale": 1.3,
+          "stamina_mult": 0.7,
+          "allowed_swings": [
+            "swing_left",
+            "swing_right",
+            "swing_thrust"
+          ],
+          "parry_window_ms": 100,
+          "nv_weapon_type": "HandToHand",
+          "status": "proposed"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "sheet": "aiming",
+  "version": "0.1",
+  "tables": {
+    "gun_classes": {
+      "columns": [
+        "id",
+        "label",
+        "weight",
+        "sway_base",
+        "sway_per_stamina_lost",
+        "breath_hold_stamina_cost",
+        "ads_time_ms",
+        "recoil_recovery_ms",
+        "arm_fatigue_rate",
+        "status"
+      ],
+      "rows": [
+        {
+          "id": "pistol",
+          "label": "Pistol / revolver",
+          "weight": 1.5,
+          "sway_base": 0.6,
+          "sway_per_stamina_lost": 0.01,
+          "breath_hold_stamina_cost": 4,
+          "ads_time_ms": 200,
+          "recoil_recovery_ms": 250,
+          "arm_fatigue_rate": 0.5,
+          "status": "proposed"
+        },
+        {
+          "id": "rifle",
+          "label": "Rifle / SMG",
+          "weight": 3.5,
+          "sway_base": 1.0,
+          "sway_per_stamina_lost": 0.02,
+          "breath_hold_stamina_cost": 6,
+          "ads_time_ms": 350,
+          "recoil_recovery_ms": 400,
+          "arm_fatigue_rate": 1.0,
+          "status": "proposed"
+        },
+        {
+          "id": "shotgun",
+          "label": "Shotgun",
+          "weight": 4.0,
+          "sway_base": 1.1,
+          "sway_per_stamina_lost": 0.02,
+          "breath_hold_stamina_cost": 6,
+          "ads_time_ms": 400,
+          "recoil_recovery_ms": 500,
+          "arm_fatigue_rate": 1.1,
+          "status": "proposed"
+        },
+        {
+          "id": "heavy",
+          "label": "Heavy weapon",
+          "weight": 8.0,
+          "sway_base": 1.6,
+          "sway_per_stamina_lost": 0.03,
+          "breath_hold_stamina_cost": 9,
+          "ads_time_ms": 600,
+          "recoil_recovery_ms": 700,
+          "arm_fatigue_rate": 2.0,
+          "status": "proposed"
+        },
+        {
+          "id": "energy",
+          "label": "Energy weapon",
+          "weight": 3.0,
+          "sway_base": 0.9,
+          "sway_per_stamina_lost": 0.02,
+          "breath_hold_stamina_cost": 5,
+          "ads_time_ms": 300,
+          "recoil_recovery_ms": 300,
+          "arm_fatigue_rate": 0.9,
+          "status": "proposed"
+        }
+      ]
+    }
+  }
+}
